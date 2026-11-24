@@ -1,0 +1,10 @@
+{
+  "name": "nekto-music",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npm --prefix app run dev",
+    "build": "npm --prefix app run build"
+  }
+}

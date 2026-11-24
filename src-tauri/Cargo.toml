@@ -1,0 +1,23 @@
+[package]
+name = "nekto-music"
+version = "1.0.0"
+description = "NEKTO desktop music player"
+authors = ["NEKTO"]
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["protocol-asset", "image-png"] }
+tauri-plugin-dialog = "2"
+serde = { version = "1", features = ["derive"] }
+lofty = "0.22"
+base64 = "0.22"
+notify = "7"
+encoding_rs = "0.8"
+rusqlite = { version = "0.32", features = ["bundled"] }
+
+[features]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]

@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700;750&display=swap');
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;font-synthesis:none;text-rendering:optimizeLegibility}*{box-sizing:border-box}body{margin:0;min-width:800px;min-height:600px;background:#080808;color:var(--text)}button,input{font:inherit}button{color:inherit;cursor:pointer}.app-shell{--bg:#090909;--surface:#111;--surface-2:#171717;--surface-3:#202020;--line:#282828;--text:#f1f1f1;--muted:#929292;--subtle:#b7b7b7;--accent:#d7d7d7;--accent-text:#111;--hover:#202020;--cover-shadow:rgba(0,0,0,.25);height:100vh;min-height:650px;padding:12px;display:flex;flex-direction:column;gap:10px;background:var(--bg);color:var(--text);overflow:hidden}.app-shell[data-theme="paper"]{--bg:#e9e8e4;--surface:#f7f6f2;--surface-2:#efeee9;--surface-3:#e6e5df;--line:#d9d8d1;--text:#242422;--muted:#77766f;--subtle:#5c5b55;--accent:#262624;--accent-text:#fff;--hover:#e8e7e1}.app-shell[data-theme="warm"]{--bg:#171310;--surface:#211a16;--surface-2:#2a211c;--surface-3:#352922;--line:#40332a;--text:#f1e9e1;--muted:#a99b8f;--subtle:#c7b9ad;--accent:#d6c1ad;--accent-text:#241b16;--hover:#30251f}.app-shell[data-theme="ash"]{--bg:#151719;--surface:#1d2023;--surface-2:#25292d;--surface-3:#30363b;--line:#373e43;--text:#eceff1;--muted:#929ba1;--subtle:#c1c8cc;--accent:#c5cdd1;--accent-text:#171a1c;--hover:#2a3034}.app-shell[data-theme="pearl"]{--bg:#d9dde0;--surface:#f0f2f3;--surface-2:#e5e9eb;--surface-3:#d9dfe2;--line:#c8d0d4;--text:#20272b;--muted:#718087;--subtle:#4d5b62;--accent:#34434a;--accent-text:#f7fafb;--hover:#e0e6e9}.app-shell[data-theme="glass"]{--bg:#0c0e10;--surface:rgba(27,30,33,.88);--surface-2:rgba(39,43,47,.82);--surface-3:rgba(53,58,63,.8);--line:rgba(255,255,255,.11);--text:#edf0f2;--muted:#969da3;--subtle:#c1c7cc;--accent:#d8dde0;--accent-text:#16191b;--hover:rgba(255,255,255,.07);backdrop-filter:blur(14px)}.app-shell[data-theme="studio"]{--bg:#111315;--surface:#181b1e;--surface-2:#202428;--surface-3:#292e33;--line:#30363b;--text:#eef0f1;--muted:#899198;--subtle:#b8c0c5;--accent:#cbd2d6;--accent-text:#16191b;--hover:#252a2e}.topbar{height:58px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 12px 0 15px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}.brand{display:flex;align-items:center;gap:10px;font-size:14px;letter-spacing:.13em;font-weight:500}.brand b{font-weight:750}.brand-mark{width:30px;height:30px;display:grid;place-items:center;border-radius:9px;background:var(--text);color:var(--bg)}.top-actions{display:flex;align-items:center;gap:9px;flex:1;max-width:760px;margin-left:28px}.icon-button,.tiny-icon{border:0;background:transparent;color:var(--muted);display:grid;place-items:center;border-radius:8px}.icon-button{width:36px;height:36px}.icon-button:hover,.tiny-icon:hover{background:var(--hover);color:var(--text)}.rotate-90{transform:rotate(90deg)}.rotate-270{transform:rotate(-90deg)}.search-box{height:38px;flex:1;display:flex;align-items:center;gap:10px;padding:0 12px;border:1px solid var(--line);border-radius:9px;background:var(--surface-2);color:var(--muted)}.search-box input{width:100%;border:0;outline:0;background:transparent;color:var(--text);font-size:12px}.search-box kbd{font-size:10px;white-space:nowrap;border:1px solid var(--line);border-radius:4px;padding:3px 5px;color:var(--muted)}.workspace{flex:1;min-height:0;display:grid;grid-template-columns:246px minmax(340px,1fr) 270px;gap:10px}.panel{background:var(--surface);border:1px solid var(--line);border-radius:12px;min-height:0}.sidebar{display:flex;flex-direction:column;overflow:hidden}.side-scroll{padding:18px 12px 12px;overflow:auto;flex:1}.side-label,.section-heading,.eyebrow{font-size:9px;letter-spacing:.14em;font-weight:700;color:var(--muted)}.side-label{padding:0 10px 12px}.nav-list{display:flex;flex-direction:column;gap:3px}.nav-item{width:100%;height:37px;border:0;background:transparent;display:flex;align-items:center;gap:11px;text-align:left;padding:0 10px;border-radius:7px;color:var(--subtle);font-size:12px}.nav-item svg{color:var(--muted);flex:none}.nav-item:hover{background:var(--hover);color:var(--text)}.nav-item.active{background:var(--surface-3);color:var(--text);font-weight:600}.nav-item.active svg{color:var(--text)}.side-divider{height:1px;background:var(--line);margin:15px 4px}.section-heading{display:flex;align-items:center;justify-content:space-between;padding:0 8px 8px}.tiny-icon{width:28px;height:28px;flex:none}.section-heading .tiny-icon{width:24px;height:24px}.playlist-nav,.folder-nav{gap:2px}.mini-playlist{width:22px;height:22px;border-radius:5px;display:grid;place-items:center;background:#333;color:#ddd;flex:none}.mini-1{background:#555}.mini-2{background:#777;color:#111}.mini-3{background:#454545}.muted{color:var(--muted)}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.folder-count{margin-left:auto;color:var(--muted);font-size:10px}.settings-link{height:48px;flex:none;border:0;border-top:1px solid var(--line);background:transparent;display:flex;align-items:center;gap:10px;padding:0 22px;color:var(--subtle);font-size:12px}.settings-link:hover{color:var(--text);background:var(--hover)}.main-panel{overflow:hidden}.main-scroll{height:100%;overflow:auto;padding:30px 34px 42px}.welcome-row{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:34px}.welcome-row h1,.page-heading h1,.main-scroll>h1{font-size:32px;letter-spacing:-.055em;margin:9px 0 6px;font-weight:650}.welcome-row p,.page-heading p{font-size:12px;color:var(--muted);margin:0}.subtle-button,.primary-button{height:36px;border-radius:7px;padding:0 12px;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:11px;font-weight:600}.subtle-button{border:1px solid var(--line);background:var(--surface-2);color:var(--subtle)}.subtle-button:hover{background:var(--hover);color:var(--text)}.primary-button{border:0;background:var(--accent);color:var(--accent-text)}.primary-button:hover{filter:brightness(.92)}.content-section{margin-top:28px}.section-title-row{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:14px}.section-title-row h2{font-size:19px;letter-spacing:-.04em;margin:5px 0 0;font-weight:650}.text-button{border:0;background:transparent;color:var(--muted);display:flex;align-items:center;gap:4px;font-size:11px}.text-button:hover{color:var(--text)}.album-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.album-card{border:0;background:transparent;text-align:left;padding:8px;border-radius:8px;display:flex;flex-direction:column;gap:7px;min-width:0}.album-card:hover{background:var(--hover)}.album-card b,.playlist-card b{font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600}.album-card>span,.playlist-card span{font-size:10px;color:var(--muted)}.cover{aspect-ratio:1;width:100%;border-radius:7px;display:grid;place-items:center;overflow:hidden;box-shadow:0 5px 14px var(--cover-shadow);background:#363636;color:#d9d9d9}.cover span{font-size:44px;font-weight:700;letter-spacing:-.08em;opacity:.76}.cover-0{background:#3a3937}.cover-1{background:#5b5b59;color:#dededb}.cover-2{background:#292d30;color:#c1c5c7}.cover-3{background:#494342;color:#e0d7d0}.cover-4{background:#55504b;color:#eee8df}.cover-5{background:#303436;color:#bfc5c6}.cover-small{width:36px;height:36px;aspect-ratio:1;flex:none;border-radius:5px}.cover-small span{font-size:18px}.playlist-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.playlist-card{min-width:0;display:flex;align-items:center;gap:11px;text-align:left;padding:9px;border:1px solid var(--line);border-radius:8px;background:var(--surface-2)}.playlist-card:hover{background:var(--hover)}.playlist-card>div:last-child{min-width:0;display:flex;flex-direction:column;gap:4px}.playlist-art,.create-art{width:42px;height:42px;flex:none;display:grid;place-items:center;border-radius:6px;background:#383838;color:#ddd}.art-1{background:#555}.art-2{background:#45494a}.art-3{background:#625d58}.create-art{background:var(--surface-3);color:var(--subtle)}.page-heading{margin:8px 0 22px}.page-heading h1{margin-top:7px}.playlist-actions{display:flex;gap:8px;margin-bottom:22px}.track-toolbar,.track-row{display:grid;grid-template-columns:25px 36px minmax(110px,1.4fr) minmax(80px,1fr) minmax(70px,.7fr) 104px;align-items:center;gap:11px}.track-toolbar{height:36px;padding:0 10px;border-bottom:1px solid var(--line);font-size:10px;color:var(--muted)}.track-toolbar span:last-child{display:flex;justify-content:flex-end}.track-row{min-height:58px;padding:6px 10px;border-radius:7px;color:var(--subtle);font-size:11px}.track-row:hover{background:var(--hover)}.track-row.is-current{background:var(--surface-2)}.track-index{font-size:10px;color:var(--muted);text-align:center}.track-name{min-width:0;display:flex;flex-direction:column;gap:4px}.track-name b{font-size:11px;color:var(--text);font-weight:550;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.track-name span,.track-album,.track-folder{font-size:10px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.track-end{display:flex;align-items:center;justify-content:flex-end;gap:8px;color:var(--muted);font-size:10px}.favorite-on{color:#c8b3b3!important}.empty-state{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:9px;padding:60px 10px;color:var(--muted);font-size:12px}.empty-state b{color:var(--text)}.right-panel{display:flex;flex-direction:column;overflow:hidden}.right-head{display:flex;align-items:flex-start;justify-content:space-between;padding:20px 17px 13px}.right-head h3{font-size:18px;margin:5px 0 0;letter-spacing:-.03em}.right-tabs{display:flex;gap:5px;padding:0 16px 12px;border-bottom:1px solid var(--line)}.right-tabs button{height:27px;padding:0 10px;border:0;border-radius:5px;background:transparent;color:var(--muted);font-size:10px}.right-tabs button.selected{background:var(--surface-3);color:var(--text)}.right-track-list{overflow:auto;padding:8px 10px;flex:1}.right-track{display:flex;align-items:center;gap:9px;padding:8px 6px;border-radius:6px}.right-track:hover{background:var(--hover)}.right-track>div:nth-child(2){min-width:0;display:flex;flex-direction:column;gap:4px;flex:1}.right-track b{font-size:10px;font-weight:550;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.right-track span{font-size:9px;color:var(--muted);white-space:nowrap}.right-bottom{padding:12px;border-top:1px solid var(--line)}.full-width{width:100%}.now-playing-card{padding:17px;overflow:auto}.now-playing-card .cover{width:100%;margin-bottom:16px}.now-playing-card h3{font-size:17px;margin:0 0 5px}.now-playing-card p{font-size:11px;color:var(--muted);margin:0 0 24px}.detail-line{display:flex;justify-content:space-between;padding:10px 0;border-top:1px solid var(--line);font-size:10px}.detail-line span{color:var(--muted)}.detail-line b{font-weight:550}.player-bar{height:78px;flex:none;border:1px solid var(--line);border-radius:12px;background:var(--surface);display:grid;grid-template-columns:1fr 1.3fr 1fr;align-items:center;padding:0 17px;gap:20px}.now-playing{display:flex;align-items:center;gap:10px;min-width:0}.now-playing>div:nth-child(2){display:flex;flex-direction:column;gap:4px;min-width:0}.now-playing b{font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.now-playing span{font-size:10px;color:var(--muted)}.now-playing .tiny-icon{margin-left:3px}.player-center{display:flex;flex-direction:column;gap:8px;align-items:center}.player-controls{display:flex;align-items:center;gap:13px}.player-controls .icon-button{width:28px;height:28px}.play-button{width:34px;height:34px;border:0;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--accent-text)}.progress-row{width:100%;display:flex;align-items:center;gap:9px;font-size:9px;color:var(--muted)}.progress-track{height:3px;border-radius:4px;background:var(--surface-3);flex:1;overflow:hidden}.progress-track div{height:100%;width:31%;background:var(--text);border-radius:4px}.player-extra{display:flex;align-items:center;justify-content:flex-end;gap:8px}.player-extra input{width:85px;height:3px;accent-color:var(--text)}.modal-backdrop{position:fixed;inset:0;z-index:10;background:rgba(0,0,0,.58);backdrop-filter:blur(5px);display:grid;place-items:center;padding:24px}.settings-modal{width:min(760px,95vw);max-height:90vh;overflow:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface);box-shadow:0 22px 80px rgba(0,0,0,.35);padding:22px}.modal-head{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:17px;border-bottom:1px solid var(--line)}.modal-head h2{font-size:25px;margin:6px 0 0;letter-spacing:-.04em}.settings-content{display:flex;flex-direction:column;gap:23px;padding:19px 0}.settings-section-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}.settings-section-title h3{font-size:14px;margin:0 0 5px}.settings-section-title p{font-size:10px;color:var(--muted);margin:0}.settings-section-title>svg{color:var(--muted)}.theme-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.theme-option{position:relative;display:flex;align-items:center;gap:10px;padding:9px;border:1px solid var(--line);border-radius:8px;background:var(--surface-2);text-align:left}.theme-option:hover{background:var(--hover)}.theme-option.chosen{border-color:var(--subtle);box-shadow:inset 0 0 0 1px var(--subtle)}.theme-preview{width:54px;height:39px;border-radius:5px;display:flex;gap:3px;padding:5px;flex:none;background:#111}.theme-preview i{display:block;border-radius:2px;background:#333}.theme-preview i:first-child{width:12px}.theme-preview i:nth-child(2){flex:1;background:#555}.theme-preview i:nth-child(3){width:10px;background:#777}.preview-paper{background:#eee}.preview-paper i{background:#ccc!important}.preview-warm{background:#211a16}.preview-warm i{background:#45352a!important}.preview-ash{background:#151719}.preview-ash i{background:#747b7e!important}.preview-pearl{background:#e9e8e5}.preview-pearl i{background:#c6c7c1!important}.preview-glass{background:#20282e}.preview-glass i{background:#56616a!important}.preview-studio{background:#171b1e}.preview-studio i{background:#343c42!important}.preview-ash i{background:#747b7e!important}.preview-pearl i{background:#c6c7c1!important}.theme-option-copy{display:flex;flex-direction:column;gap:4px;min-width:0}.theme-option-copy b{font-size:11px}.theme-option-copy span{font-size:9px;line-height:1.35;color:var(--muted)}.theme-check{margin-left:auto;flex:none;color:var(--text)}.toggle-row{display:flex;align-items:center;justify-content:space-between;padding:12px;border:1px solid var(--line);border-radius:7px;background:var(--surface-2)}.toggle-row span{display:flex;flex-direction:column;gap:4px}.toggle-row b{font-size:11px}.toggle-row small{font-size:9px;color:var(--muted)}.toggle-row input{accent-color:var(--text);width:15px;height:15px}.choice-list{display:flex;flex-direction:column;gap:4px;margin-top:8px}.choice-row{height:36px;padding:0 11px;display:flex;align-items:center;justify-content:space-between;border:1px solid transparent;border-radius:6px;background:transparent;text-align:left;color:var(--subtle);font-size:11px}.choice-row:hover{background:var(--hover)}.choice-row.choice-active{background:var(--surface-2);border-color:var(--line);color:var(--text)}.modal-foot{display:flex;justify-content:space-between;align-items:center;padding-top:13px;border-top:1px solid var(--line);font-size:10px;color:var(--muted)}
+@media(max-width:1150px){.player-bar{grid-template-columns:1fr 1.2fr .7fr}.album-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:900px){.workspace{grid-template-columns:190px minmax(280px,1fr)}.main-scroll{padding:24px 20px}.track-toolbar,.track-row{grid-template-columns:20px 34px minmax(100px,1.5fr) minmax(65px,1fr) 86px}.track-folder,.track-toolbar span:nth-child(5){display:none}.album-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.top-actions{margin-left:12px}.brand{font-size:11px}}
+
+/* Milestone 04 — functional playback controls */
+.seek-range{width:100%;min-width:40px;flex:1;height:3px;accent-color:var(--text);cursor:pointer}.seek-range:disabled{opacity:.35;cursor:default}.player-extra input{accent-color:var(--text);cursor:pointer}.control-active{color:var(--text)!important;background:var(--surface-3)!important}.player-controls .repeat-one{position:absolute;font-size:8px;font-weight:700}.player-controls button{position:relative}.play-error{position:fixed;right:24px;bottom:102px;z-index:20;max-width:min(420px,calc(100vw - 48px));display:flex;align-items:center;gap:14px;padding:12px 14px;border:1px solid var(--line);border-radius:9px;background:var(--surface);color:var(--text);font-size:11px;box-shadow:0 12px 35px rgba(0,0,0,.28)}.play-error button{display:grid;place-items:center;border:0;background:transparent;color:var(--muted);padding:2px}
+
+/* Milestone 06: embedded album artwork and queue controls */
+.artwork-cover{overflow:hidden;position:relative;background:var(--surface-3)}
+.artwork-cover img{display:block;width:100%;height:100%;object-fit:cover}
+.queue-actions{display:flex;align-items:center;gap:1px;flex:none}
+.queue-actions .tiny-icon{width:22px;height:24px;font-size:12px}
+.right-track{cursor:pointer}
+.right-track.is-current{background:var(--hover)}
+
+
+/* Milestone 07 — real library collections, sorting and search ergonomics */
+.collection-summary{margin:-2px 0 20px;color:var(--muted);font-size:11px}
+.sort-control{display:flex;align-items:center;justify-content:flex-end;gap:7px;min-width:0;color:var(--muted);font-size:9px}
+.sort-control select{max-width:145px;height:27px;padding:0 7px;border:1px solid var(--line);border-radius:6px;background:var(--surface-2);color:var(--subtle);font-size:9px;outline:none}
+.sort-control select:focus-visible{border-color:var(--subtle);box-shadow:0 0 0 2px color-mix(in srgb,var(--text) 15%,transparent)}
+.track-toolbar{grid-template-columns:25px 36px minmax(110px,1.4fr) minmax(80px,1fr) minmax(70px,.7fr) 150px}
+@media(max-width:900px){.track-toolbar{grid-template-columns:20px 34px minmax(100px,1.5fr) minmax(65px,1fr) 130px}.sort-control>span{display:none}}
+
+
+/* Milestone 08 — playlist and queue interactions */
+.drop-target {
+  background: color-mix(in srgb, var(--accent, #b8a0ff) 17%, transparent) !important;
+  outline: 1px dashed var(--accent, #b8a0ff);
+  outline-offset: -2px;
+}
+.track-row[draggable="true"], .right-track[draggable="true"] { cursor: grab; }
+.track-row[draggable="true"]:active, .right-track[draggable="true"]:active { cursor: grabbing; }
+.drop-indicator {
+  outline: 1px solid var(--accent, #b8a0ff);
+  outline-offset: -1px;
+  background: color-mix(in srgb, var(--accent, #b8a0ff) 12%, transparent);
+}
+.playlist-description {
+  max-width: 680px;
+  margin-top: 7px !important;
+  color: var(--text-muted, #92929b);
+  line-height: 1.55;
+}
+.right-head-actions { display: flex; align-items: center; gap: 5px; }
+.queue-empty {
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 24px;
+  text-align: center;
+  color: var(--text-muted, #92929b);
+}
+.queue-empty b { color: var(--text, #eee); font-size: 13px; }
+.queue-empty span { max-width: 190px; font-size: 12px; line-height: 1.5; }
+
+/* Milestone 09 — preferences, keyboard ergonomics and accessible focus */
+.folder-nav-row{display:flex;align-items:center;gap:2px;min-width:0}
+.folder-nav-row>.nav-item{flex:1;min-width:0}
+.folder-remove{opacity:0;flex:none;width:25px;height:25px}
+.folder-nav-row:hover .folder-remove,.folder-nav-row:focus-within .folder-remove{opacity:1}
+.refresh-spin{display:inline-flex;animation:nekto-spin .9s linear infinite}
+@keyframes nekto-spin{to{transform:rotate(360deg)}}
+.shortcut-list{display:flex;flex-direction:column;gap:7px;margin-top:15px;padding:13px;border:1px solid var(--line);border-radius:8px;background:var(--surface-2)}
+.shortcut-list h4{margin:0 0 3px;font-size:11px;color:var(--text)}
+.shortcut-list>div{display:flex;align-items:center;justify-content:space-between;gap:12px;color:var(--muted);font-size:10px}
+.shortcut-list kbd{padding:3px 6px;border:1px solid var(--line);border-radius:4px;background:var(--surface-3);color:var(--text);font:inherit;font-size:9px;white-space:nowrap}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent,#b8a0ff);outline-offset:2px}
+html[data-reduce-motion="true"] *{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* 1.0.0 — tactile sliding drawers, resize rails and configurable panels */
+.workspace{grid-template-columns:246px 8px minmax(320px,1fr) 8px 270px;gap:8px}
+.sidebar,.right-panel{position:relative;transition:width .22s ease,transform .22s ease,opacity .18s ease;will-change:width}
+.sidebar.drawer-collapsed,.right-panel.drawer-collapsed{overflow:hidden;display:flex;align-items:center;justify-content:flex-start;padding-top:8px}
+.sidebar.drawer-collapsed .side-scroll,.sidebar.drawer-collapsed .settings-link{display:none}
+.drawer-toggle{width:28px;height:30px;display:grid;place-items:center;border:0;border-radius:7px;background:var(--surface-2);color:var(--muted);cursor:pointer;flex:none}
+.drawer-toggle:hover{background:var(--hover);color:var(--text)}
+.sidebar>.drawer-toggle{position:absolute;top:8px;right:8px;z-index:3;opacity:.65}
+.sidebar:not(.drawer-collapsed)>.drawer-toggle{opacity:0;transition:opacity .15s ease}
+.sidebar:not(.drawer-collapsed):hover>.drawer-toggle,.sidebar:not(.drawer-collapsed):focus-within>.drawer-toggle{opacity:1}
+.sidebar:not(.drawer-collapsed) .side-scroll{padding-top:42px}
+.right-panel.drawer-collapsed{align-items:center;padding-top:8px}
+.resize-handle{width:8px;min-width:8px;align-self:stretch;position:relative;cursor:col-resize;touch-action:none;border-radius:8px;z-index:2}
+.resize-handle:before{content:"";position:absolute;top:12px;bottom:12px;left:3px;width:2px;border-radius:3px;background:transparent;transition:background .15s ease}
+.resize-handle:hover:before,.resize-handle:active:before{background:var(--muted)}
+.brand-mark{overflow:hidden;padding:0;background:#000!important;color:#fff!important}
+.brand-mark img{display:block;width:100%;height:100%;object-fit:cover}
+.playlist-art img,.cover img{width:100%;height:100%;object-fit:cover;display:block}
+.lyrics-panel{flex:1;min-height:0;overflow:auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:20px;text-align:center;color:var(--muted);font-size:11px}
+.lyrics-panel b{color:var(--text);font-size:13px}
+.lyrics-panel span{max-width:210px;line-height:1.55}
+.lyrics-panel pre{width:100%;white-space:pre-wrap;text-align:center;color:var(--text);font:500 12px/2 Inter,system-ui,sans-serif;margin:0}
+.right-tabs{overflow-x:auto;scrollbar-width:thin}
+.right-tabs button{white-space:nowrap;flex:none}
+
+.workspace{transition:grid-template-columns .22s ease}
+.app-shell[data-density="compact"] .nav-item{height:31px}
+.app-shell[data-density="compact"] .track-row{min-height:45px}
+.app-shell[data-density="compact"] .right-track{min-height:43px}
+.app-shell[data-density="compact"] .side-divider{margin:10px 4px}
+.density-choice{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:12px}
+.density-choice button{min-height:36px;border:1px solid var(--line);border-radius:7px;background:var(--surface-2);color:var(--subtle);font-size:10px}
+.density-choice button.choice-active{border-color:var(--subtle);background:var(--surface-3);color:var(--text)}
+.layout-tab-list{display:flex;flex-direction:column;gap:7px}
+.layout-tab-list> b{font-size:11px;margin:4px 0}
+.layout-hint{margin:10px 0 0;color:var(--muted);font-size:10px;line-height:1.6}
+.right-tabs button[draggable="true"]{cursor:grab}
+.right-tabs button[draggable="true"]:active{cursor:grabbing}
+
+/* Flat NEKTO brand mark: no shine, reflection, glow, or shadow. */
+.brand-mark{background:#000!important;box-shadow:none!important;filter:none!important;-webkit-box-reflect:none!important;transform:none!important}
+.brand-mark img{filter:none!important;box-shadow:none!important;mix-blend-mode:normal!important;opacity:1!important}
+
+
+/* 1.0.0 UI refinement — compact library navigation and non-intrusive controls */
+.top-actions{gap:10px;min-width:0}
+.top-section-nav{display:flex;align-items:center;gap:3px;flex:none}
+.top-section-nav button{height:34px;padding:0 11px;border:1px solid transparent;border-radius:7px;background:transparent;color:var(--muted);font-size:11px;font-weight:600;white-space:nowrap}
+.top-section-nav button:hover{background:var(--hover);color:var(--text)}
+.top-section-nav button.active{background:var(--surface-3);border-color:var(--line);color:var(--text)}
+.search-box{min-width:170px;flex:1}
+.track-menu-wrap{position:relative;display:flex;align-items:center}
+.track-context-menu{position:absolute;right:0;top:calc(100% + 7px);z-index:40;min-width:190px;max-width:240px;display:flex;flex-direction:column;gap:3px;padding:8px;border:1px solid var(--line);border-radius:10px;background:var(--surface);box-shadow:0 14px 36px rgba(0,0,0,.42)}
+.track-context-menu>b{padding:5px 8px 7px;color:var(--muted);font-size:10px;font-weight:600}
+.track-context-menu button{width:100%;min-height:31px;padding:6px 9px;border:0;border-radius:6px;background:transparent;color:var(--text);text-align:left;font-size:11px}
+.track-context-menu button:hover{background:var(--hover)}
+.toast-message{position:fixed;left:50%;bottom:104px;z-index:80;transform:translateX(-50%);padding:10px 15px;border:1px solid var(--line);border-radius:9px;background:var(--surface-3);color:var(--text);font-size:11px;font-weight:600;box-shadow:0 10px 30px rgba(0,0,0,.35);pointer-events:none;animation:toast-in .16s ease-out}
+@keyframes toast-in{from{opacity:0;transform:translate(-50%,6px)}to{opacity:1;transform:translate(-50%,0)}}
+/* Hide native scrollbars: scrolling remains available with the mouse wheel/trackpad. */
+*{scrollbar-width:none!important}
+*::-webkit-scrollbar{display:none!important;width:0!important;height:0!important}
+input:not([type="range"]):focus,input:not([type="range"]):focus-visible,textarea:focus,select:focus{outline:none!important;box-shadow:none!important;border-color:var(--line)!important}
+.search-box:focus-within{border-color:var(--line)!important;box-shadow:none!important}
+input[type="range"]{accent-color:var(--accent)}
+/* Panels are resized and collapsed exclusively by dragging their edges. */
+.drawer-toggle,.settings-link{display:none!important}
+.sidebar:not(.drawer-collapsed) .side-scroll{padding-top:14px}
+.right-panel.drawer-collapsed{padding:0}
+@media(max-width:1250px){.top-section-nav button{padding:0 7px;font-size:10px}.top-actions{gap:6px}}
+@media(max-width:1050px){.top-section-nav{gap:0}.top-section-nav button{padding:0 6px}.topbar .brand span{display:none}}
+
+/* Hotfix 05: explicit drag affordances, nested playlist menu and picker */
+.track-row{position:relative;cursor:grab;user-select:none}
+.track-row:active{cursor:grabbing}
+.track-row.drop-before:before,.track-row.drop-after:after{content:"";position:absolute;left:8px;right:8px;height:2px;background:var(--accent);border-radius:2px;z-index:5;box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 16%,transparent)}
+.track-row.drop-before:before{top:-1px}.track-row.drop-after:after{bottom:-1px}
+.drag-track-ghost{position:fixed;left:-1000px;top:-1000px;z-index:9999;display:flex;align-items:center;gap:9px;min-width:190px;padding:10px 13px;border:1px solid var(--line);border-radius:10px;background:var(--surface-2);color:var(--text);box-shadow:0 12px 32px rgba(0,0,0,.45);pointer-events:none}
+.drag-track-ghost>span{width:28px;height:28px;display:grid;place-items:center;border-radius:7px;background:var(--surface-3);font-size:18px}.drag-track-ghost b{font-size:11px}.drag-track-ghost small{font-size:9px;color:var(--muted)}
+.track-context-menu{overflow:visible}.track-submenu-wrap{position:relative}.track-submenu-trigger{display:flex;align-items:center;justify-content:space-between}.track-submenu-trigger span{font-size:18px;color:var(--muted)}
+.track-submenu{position:absolute;right:calc(100% + 7px);left:auto;top:-7px;z-index:42;display:none;min-width:170px;max-height:260px;overflow:auto;padding:7px;border:1px solid var(--line);border-radius:9px;background:var(--surface);box-shadow:0 14px 36px rgba(0,0,0,.42)}
+.track-submenu-wrap:hover .track-submenu,.track-submenu-wrap:focus-within .track-submenu{display:flex;flex-direction:column;gap:2px}
+.add-tracks-modal{width:min(620px,94vw);max-height:86vh;display:flex;flex-direction:column;padding:22px;border:1px solid var(--line);border-radius:14px;background:var(--surface);box-shadow:0 22px 80px rgba(0,0,0,.4)}
+.add-tracks-modal .modal-head{flex:none}.add-tracks-modal .modal-head p{margin:6px 0 0;color:var(--muted);font-size:11px}
+.add-track-search{display:flex;align-items:center;gap:9px;margin:15px 0;padding:0 11px;height:40px;border:1px solid var(--line);border-radius:8px;background:var(--surface-2);color:var(--muted)}
+.add-track-search input{flex:1;min-width:0;border:0;outline:0;background:transparent;color:var(--text);box-shadow:none!important}
+.add-track-picker{overflow:auto;min-height:120px;max-height:48vh;display:flex;flex-direction:column;gap:3px}
+.add-track-option{display:flex;align-items:center;gap:10px;padding:8px;border-radius:7px;cursor:pointer}.add-track-option:hover{background:var(--hover)}.add-track-option>input{accent-color:var(--accent)}.add-track-option>span{display:flex;flex-direction:column;gap:3px;min-width:0;flex:1}.add-track-option b{font-size:11px}.add-track-option small{font-size:9px;color:var(--muted)}
+.add-tracks-modal .modal-foot{flex:none;margin-top:12px}
+.drag-track-ghost-cover{width:34px;height:34px;flex:none;display:grid;place-items:center;overflow:hidden;border-radius:6px;background:var(--surface-3);font-size:18px}.drag-track-ghost-cover img{width:100%;height:100%;object-fit:cover}.drag-track-ghost-copy{display:flex;flex-direction:column;gap:3px;min-width:0}.drag-track-ghost-copy b{max-width:190px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.drag-track-ghost-copy small{max-width:190px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* Hotfix 06 — monochrome themes with deliberately distinct contrast levels */
+.app-shell[data-theme="mono"]{--bg:#050505;--surface:#101010;--surface-2:#171717;--surface-3:#222222;--line:#303030;--text:#f5f5f5;--muted:#858585;--subtle:#c3c3c3;--accent:#f0f0f0;--accent-text:#080808;--hover:#252525}
+.app-shell[data-theme="slate"]{--bg:#17191c;--surface:#202327;--surface-2:#292d32;--surface-3:#343a40;--line:#41474e;--text:#edf0f2;--muted:#9aa2aa;--subtle:#c6cbd0;--accent:#d7dce0;--accent-text:#171a1d;--hover:#30363c}
+.app-shell[data-theme="chalk"]{--bg:#f0f0ee;--surface:#fafaf8;--surface-2:#eeeeec;--surface-3:#e3e3e0;--line:#d3d3d0;--text:#1d1d1c;--muted:#777774;--subtle:#50504e;--accent:#20201f;--accent-text:#fff;--hover:#e7e7e4}
+
+/* Unified rhythm for the five main surfaces. Resize rails sit inside the same 12px gutters. */
+.app-shell{gap:12px}
+.workspace{gap:8px}
+.resize-handle{width:4px;min-width:4px}
+.topbar,.sidebar,.main-panel,.right-panel,.player-bar{border-radius:12px}
+.settings-section-title>svg{display:none!important}
+.track-submenu{left:calc(100% + 2px);right:auto;top:-7px}
+.track-submenu-wrap{padding-right:3px}
+.track-submenu-wrap:after{content:"";position:absolute;left:100%;top:0;width:12px;height:100%;}
+.track-submenu-wrap:hover .track-submenu,.track-submenu-wrap:focus-within .track-submenu{display:flex}
+.track-row{cursor:grab;touch-action:pan-y}
+.track-row:active{cursor:grabbing}
+.pointer-drag-ghost{position:fixed;z-index:10000;display:flex;align-items:center;gap:9px;min-width:190px;max-width:250px;padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--text);box-shadow:0 12px 34px rgba(0,0,0,.48);pointer-events:none;transform:translateZ(0)}
+.pointer-drag-ghost>span:last-child{display:flex;flex-direction:column;gap:3px;min-width:0}
+.pointer-drag-ghost b,.pointer-drag-ghost small{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pointer-drag-ghost b{font-size:11px}.pointer-drag-ghost small{font-size:9px;color:var(--muted)}
+.pointer-drag-cover{width:32px;height:32px;display:grid;place-items:center;flex:none;overflow:hidden;border-radius:6px;background:var(--surface-3);font-size:18px}
+.pointer-drag-cover img{width:100%;height:100%;object-fit:cover}
+.nav-item.drop-target{outline:1px solid var(--accent);background:var(--surface-3);color:var(--text)}
+
+.brand-mark{border-radius:12px;overflow:hidden}
+.preview-mono{background:#080808!important}.preview-mono i{background:#292929!important}
+.preview-slate{background:#202327!important}.preview-slate i{background:#454c53!important}
+.preview-chalk{background:#eeeeec!important}.preview-chalk i{background:#c9c9c5!important}
+
+.playlist-nav .nav-item{cursor:grab;user-select:none;-webkit-user-select:none;touch-action:none}
+.playlist-nav .nav-item:active{cursor:grabbing}
+
+
+/* 1.0.0 polish: playlist creation, destructive-action confirmation and layout */
+.app-shell.player-at-top{flex-direction:column-reverse}
+.section-heading{position:relative;min-height:28px}
+.section-heading .tiny-icon{position:absolute;left:50%;top:0;transform:translateX(-50%);margin:0}
+.mini-playlist img{width:100%;height:100%;object-fit:cover;border-radius:inherit}
+.playlist-page-cover{width:116px;height:116px;border-radius:14px;overflow:hidden;margin-bottom:18px;border:1px solid var(--line);background:var(--surface-2)}
+.playlist-page-cover img{width:100%;height:100%;object-fit:cover}
+.danger-icon{color:#d36b6b!important}
+.danger-icon:hover{background:rgba(205,75,75,.13)!important;color:#ef7777!important}
+.modal-backdrop{z-index:1000}
+.create-playlist-modal,.confirm-delete-modal{width:min(560px,calc(100vw - 40px));max-height:min(82vh,760px);overflow:auto;padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--surface);color:var(--text);box-shadow:0 28px 90px rgba(0,0,0,.48)}
+.create-playlist-modal .modal-head p{margin:7px 0 0;color:var(--muted);font-size:12px}
+.create-playlist-body{display:grid;grid-template-columns:150px 1fr;gap:20px;margin:22px 0}
+.playlist-cover-picker{width:150px;height:150px;border:1px dashed var(--line);border-radius:13px;background:var(--surface-2);color:var(--muted);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;overflow:hidden}
+.playlist-cover-picker:hover{border-color:var(--subtle);background:var(--hover);color:var(--text)}
+.playlist-cover-picker img{width:100%;height:100%;object-fit:cover}
+.playlist-cover-picker span{font-size:12px;font-weight:600}
+.playlist-cover-picker small{font-size:10px;color:var(--muted)}
+.create-playlist-fields{display:flex;flex-direction:column;gap:14px;min-width:0}
+.create-playlist-fields label{display:flex;flex-direction:column;gap:7px;color:var(--subtle);font-size:11px;font-weight:600}
+.create-playlist-fields label small{font-weight:400;color:var(--muted)}
+.create-playlist-fields input,.create-playlist-fields textarea{width:100%;border:1px solid var(--line);border-radius:9px;background:var(--surface-2);color:var(--text);padding:11px 12px;outline:none;box-shadow:none;font-size:12px}
+.create-playlist-fields textarea{min-height:86px;resize:vertical}
+.create-playlist-fields input:focus,.create-playlist-fields textarea:focus{border-color:var(--subtle);outline:2px solid color-mix(in srgb,var(--accent) 15%,transparent);outline-offset:1px}
+.modal-foot{display:flex;align-items:center;justify-content:flex-end;gap:9px}
+.modal-foot .primary-button:disabled{opacity:.45;cursor:not-allowed}
+.confirm-delete-modal{width:min(430px,calc(100vw - 40px));text-align:left}
+.delete-modal-icon{width:44px;height:44px;display:grid;place-items:center;border-radius:12px;background:rgba(190,75,75,.12);color:#d97878;margin-bottom:18px}
+.confirm-delete-modal h2{font-size:18px;line-height:1.35;margin:9px 0}
+.confirm-delete-modal p{font-size:12px;line-height:1.65;color:var(--muted);margin:0 0 22px}
+.danger-button{height:36px;padding:0 14px;display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(205,80,80,.35);border-radius:8px;background:#a83d3d;color:white;font-size:12px;font-weight:650}
+.danger-button:hover{background:#bd4b4b}
+.settings-subsection{margin-top:18px;padding:14px;border:1px solid var(--line);border-radius:10px;background:var(--surface-2)}
+.settings-subsection h4{margin:0 0 5px;font-size:12px}
+.settings-subsection p{margin:0 0 12px;color:var(--muted);font-size:11px}
+.settings-subsection .density-choice{margin-top:0}
+.track-row{user-select:none}
+.track-row:active{cursor:grabbing}
+.track-context-menu button:focus-visible,.track-submenu-trigger:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* Light palettes use warm, low-glare surfaces instead of simple inverted dark controls. */
+.app-shell[data-theme="paper"] .panel,.app-shell[data-theme="paper"] .topbar,.app-shell[data-theme="paper"] .player-bar{box-shadow:0 1px 2px rgba(45,40,30,.035)}
+.app-shell[data-theme="paper"] .search-box,.app-shell[data-theme="paper"] .track-context-menu,.app-shell[data-theme="paper"] .settings-modal,.app-shell[data-theme="paper"] .create-playlist-modal,.app-shell[data-theme="paper"] .confirm-delete-modal{background:#fbfaf7}
+.app-shell[data-theme="paper"] .track-row:hover,.app-shell[data-theme="paper"] .nav-item:hover,.app-shell[data-theme="paper"] .choice-row:hover{background:#e9e7e0}
+.app-shell[data-theme="paper"] .track-row.is-current,.app-shell[data-theme="paper"] .nav-item.active{background:#e2e0d8;color:#22221f}
+.app-shell[data-theme="paper"] input,.app-shell[data-theme="paper"] textarea,.app-shell[data-theme="paper"] select{accent-color:#55534c}
+.app-shell[data-theme="paper"] .cover,.app-shell[data-theme="paper"] .mini-playlist{box-shadow:0 3px 12px rgba(40,36,28,.12)}
+.app-shell[data-theme="pearl"] .panel,.app-shell[data-theme="pearl"] .topbar,.app-shell[data-theme="pearl"] .player-bar{box-shadow:0 2px 8px rgba(40,55,65,.045)}
+.app-shell[data-theme="pearl"] .search-box,.app-shell[data-theme="pearl"] .track-context-menu,.app-shell[data-theme="pearl"] .settings-modal,.app-shell[data-theme="pearl"] .create-playlist-modal,.app-shell[data-theme="pearl"] .confirm-delete-modal{background:#f5f7f8}
+.app-shell[data-theme="pearl"] .track-row:hover,.app-shell[data-theme="pearl"] .nav-item:hover,.app-shell[data-theme="pearl"] .choice-row:hover{background:#e3e9ec}
+.app-shell[data-theme="pearl"] .track-row.is-current,.app-shell[data-theme="pearl"] .nav-item.active{background:#dce4e8;color:#1d292f}
+.app-shell[data-theme="pearl"] .cover,.app-shell[data-theme="pearl"] .mini-playlist{box-shadow:0 3px 12px rgba(40,55,65,.12)}
+.app-shell[data-theme="chalk"] .search-box,.app-shell[data-theme="chalk"] .track-context-menu,.app-shell[data-theme="chalk"] .settings-modal,.app-shell[data-theme="chalk"] .create-playlist-modal,.app-shell[data-theme="chalk"] .confirm-delete-modal{background:#f6f5f0}
+.app-shell[data-theme="chalk"] .track-row:hover,.app-shell[data-theme="chalk"] .nav-item:hover{background:#e6e4dc}
+@media(max-width:900px){.create-playlist-body{grid-template-columns:1fr}.playlist-cover-picker{width:100%;height:130px}.section-heading .tiny-icon{left:auto;right:0;transform:none}}
+
+/* Hotfix 09 — album identity, aligned controls and anchored player */
+.track-row,.track-toolbar{grid-template-columns:25px 36px minmax(110px,1.4fr) minmax(80px,1fr) minmax(70px,.7fr) 148px}
+.track-end{display:grid;grid-template-columns:28px 42px 28px 28px;align-items:center;justify-content:end;justify-items:center;column-gap:6px;min-width:148px;white-space:nowrap}
+.track-end>span{width:42px;text-align:center;font-variant-numeric:tabular-nums;justify-self:center}
+.track-end .track-menu-wrap{width:28px;display:grid;place-items:center}
+.track-end>.tiny-icon{width:28px;height:28px}
+.folder-nav-row>.nav-item{display:grid;grid-template-columns:16px minmax(0,1fr) 28px;column-gap:10px;align-items:center}
+.folder-nav-row .folder-count{width:28px;min-width:28px;margin:0;text-align:right;justify-self:end;font-variant-numeric:tabular-nums}
+.folder-nav-row .truncate{min-width:0}
+.player-bar{position:relative;flex:none;min-height:86px;height:86px;align-self:stretch;z-index:3}
+.player-art-button{width:58px;height:58px;flex:none;padding:0;border:0;border-radius:8px;background:transparent;overflow:hidden}
+.player-art-button .cover-small{width:58px;height:58px;border-radius:8px}
+.now-playing{gap:12px}
+.now-playing>div:nth-child(2){max-width:min(220px,45%)}
+.pointer-drag-ghost{min-width:0;max-width:176px;padding:6px 8px;gap:7px;border-radius:8px;box-shadow:0 7px 20px rgba(0,0,0,.36)}
+.pointer-drag-cover{width:25px;height:25px;border-radius:5px;font-size:14px}
+.pointer-drag-ghost b{font-size:10px}.pointer-drag-ghost small{font-size:8px}
+.settings-content{display:flex;flex-direction:column;gap:22px;min-width:0}
+.settings-section{min-width:0;overflow:visible}
+.settings-section>*{min-width:0;max-width:100%}
+.theme-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.theme-option{min-width:0;overflow:hidden}
+.theme-option-copy{min-width:0}
+.settings-subsection,.shortcut-list,.toggle-row,.choice-row{min-width:0;max-width:100%}
+@media(max-width:1100px){.track-row,.track-toolbar{grid-template-columns:22px 34px minmax(90px,1.3fr) minmax(65px,.8fr) 130px}.track-folder,.track-toolbar span:nth-child(5){display:none}.track-end{grid-template-columns:28px 42px 28px 28px;min-width:130px;column-gap:1px}}
+
+
+/* Hotfix 10 — navigation settings, queue dock and precise sidebar alignment */
+.brand{border:0;background:transparent;padding:0;color:var(--text);cursor:pointer;text-align:left;letter-spacing:.13em}
+.brand span,.brand b{font-weight:750!important}
+.section-heading{position:relative!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:8px;min-width:0;padding:0 8px 8px!important}
+.section-heading .tiny-icon{position:static!important;inset:auto!important;transform:none!important;margin-left:auto!important;display:grid;place-items:center;flex:0 0 28px;width:28px;height:28px;border-radius:8px}
+.folder-nav-row{display:flex;align-items:center;gap:4px;min-width:0;width:100%}
+.folder-nav-row>.nav-item{flex:1 1 auto;min-width:0;width:0;display:grid;grid-template-columns:16px minmax(0,1fr) 28px;column-gap:9px;align-items:center}
+.folder-nav-row .folder-count{grid-column:3;justify-self:end;width:28px;min-width:28px;margin:0;text-align:right;font-variant-numeric:tabular-nums}
+.folder-nav-row .folder-remove{flex:0 0 25px;width:25px;height:25px;display:grid;place-items:center}
+.settings-content{gap:26px}
+.settings-section{display:flex;flex-direction:column;gap:10px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.settings-section:last-child{padding-bottom:0;border-bottom:0}
+.settings-section-title{margin-bottom:2px}
+.settings-option-list{display:flex;flex-direction:column;gap:8px;min-width:0}
+.settings-option-list .toggle-row{margin:0;min-height:58px;gap:14px}
+.settings-option-list .toggle-row span{min-width:0;flex:1}
+.settings-option-list .toggle-row small{line-height:1.4}
+.settings-option-list .toggle-row input{flex:none;margin:0 2px 0 12px}
+.settings-subsection{margin-top:8px}
+.danger-icon,.danger-icon:hover{color:var(--muted)!important;background:transparent!important}
+.playlist-actions{align-items:center}
+.playlist-actions .tiny-icon{align-self:center;display:grid;place-items:center;margin:0;height:36px;width:36px;border:1px solid var(--line);border-radius:8px}
+.danger-button,.danger-button:hover{background:var(--accent)!important;color:var(--accent-text)!important;border:1px solid var(--accent)!important}
+.delete-modal-icon{background:var(--surface-3)!important;color:var(--text)!important}
+.right-track-copy{min-width:0;flex:1;display:flex;flex-direction:column;gap:4px;text-align:left;border:0;background:transparent;padding:0;color:var(--text)}
+.right-track-copy b{overflow:hidden;text-overflow:ellipsis}
+.right-track-duration{width:38px;text-align:right;font-variant-numeric:tabular-nums}
+.queue-remove{flex:none;width:25px;height:25px}
+.queue-panel-list .right-track{gap:7px}
+.queue-panel-list .empty-state{padding:38px 10px}
+@media(max-width:900px){.section-heading .tiny-icon{position:static!important;left:auto!important;right:auto!important;transform:none!important}}
+
+/* Hotfix 11 — compact playlist editing, resizable anchored player, configurable shortcuts */
+.playlist-actions{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.playlist-edit-wrap{position:relative;display:inline-flex;align-items:center}
+.playlist-edit-trigger{white-space:nowrap}
+.playlist-edit-menu{position:absolute;z-index:35;left:0;top:calc(100% + 7px);min-width:190px;padding:5px;border:1px solid var(--line);border-radius:10px;background:var(--surface-3);box-shadow:0 12px 34px rgba(0,0,0,.32);display:flex;flex-direction:column;gap:2px}
+.playlist-edit-menu button{display:flex;align-items:center;gap:9px;width:100%;padding:9px 10px;border:0;border-radius:6px;background:transparent;color:var(--text);text-align:left;font-size:11px;white-space:nowrap}
+.playlist-edit-menu button:hover{background:var(--hover)}
+.player-bar{position:relative;box-sizing:border-box;flex:none;min-height:86px;overflow:visible;transition:height .12s ease,min-height .12s ease}
+.player-resize-handle{position:absolute;z-index:8;left:0;right:0;top:-4px;height:8px;cursor:ns-resize;touch-action:none}
+.player-resize-handle:after{content:"";position:absolute;left:50%;top:3px;transform:translateX(-50%);width:46px;height:2px;border-radius:2px;background:var(--muted);opacity:0;transition:opacity .15s,width .15s}
+.player-resize-handle:hover:after{opacity:.8;width:68px}
+.player-resize-handle.resize-bottom{top:auto;bottom:-4px}
+.player-bar .now-playing,.player-bar .player-center,.player-bar .player-extra{min-width:0}
+.player-bar .player-center{width:min(100%,560px);justify-self:center}
+.player-bar[style*="190px"]{padding-top:18px;padding-bottom:12px}
+.toast-message{pointer-events:auto;cursor:pointer;user-select:none}
+.toast-message span{font-weight:450;color:var(--muted)}
+.shortcut-list{gap:9px}
+.shortcut-hint{margin:0;color:var(--muted);font-size:10px;line-height:1.45}
+.shortcut-row{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:34px}
+.shortcut-row>span{min-width:0}
+.shortcut-capture{min-width:104px;max-width:48%;padding:6px 9px;border:1px solid var(--line);border-radius:6px;background:var(--surface-3);color:var(--text);font:inherit;font-size:10px;text-align:center;white-space:nowrap}
+.shortcut-capture:hover,.shortcut-capture.is-recording{border-color:var(--subtle);background:var(--hover)}
+.shortcut-capture.is-recording{min-width:145px}
+.shortcut-reset{align-self:flex-start;padding:5px 0;border:0;background:transparent;color:var(--muted);font-size:10px;cursor:pointer}
+.shortcut-reset:hover{color:var(--text)}
+@media(max-width:760px){.player-bar{grid-template-columns:minmax(0,1fr) auto;gap:10px;padding:8px 10px}.player-bar .player-center{grid-column:1/-1;grid-row:2;width:100%}.player-bar .player-extra{grid-column:2;grid-row:1}.player-bar .now-playing{grid-column:1;grid-row:1}.playlist-actions{gap:6px}}
+.player-bar.player-expanded{grid-template-columns:minmax(0,1fr) minmax(280px,1.4fr) minmax(0,1fr);padding-top:16px;padding-bottom:12px;align-content:center}
+.player-bar.player-expanded .player-controls{gap:17px}
+.player-bar.player-expanded .player-controls .icon-button{width:36px;height:36px}
+.player-bar.player-expanded .play-button{width:44px;height:44px}
+.player-bar.player-expanded .player-art-button,.player-bar.player-expanded .player-art-button .cover-small{width:68px;height:68px}
+.player-bar.player-expanded .now-playing{gap:14px;align-self:center}
+.player-bar.player-expanded .player-center{gap:11px;align-self:center}
+.player-bar.player-expanded .player-extra{align-self:center}
+
+/* Hotfix 12 — right-opening playlist flyout, compact editor and stable navigation */
+.track-submenu{left:calc(100% + 7px)!important;right:auto!important;top:-7px!important}
+.track-submenu-wrap:after{left:100%!important;right:auto!important;width:12px}
+.track-submenu-wrap{padding-left:0!important;padding-right:3px}
+.page-title-line{display:flex;align-items:center;gap:10px;min-width:0}
+.page-title-line h1{margin:0;min-width:0}
+.playlist-edit-pencil{width:30px;height:30px;display:grid;place-items:center;border:1px solid var(--line);border-radius:8px;color:var(--muted)}
+.playlist-edit-pencil:hover{background:var(--hover);color:var(--text)}
+.playlist-actions{gap:7px}
+.playlist-actions>.primary-button,.playlist-actions>.subtle-button{min-height:34px;padding:0 11px;font-size:10px}
+.folder-nav-row .folder-remove{opacity:.72}
+.folder-nav-row:hover .folder-remove,.folder-nav-row:focus-within .folder-remove{opacity:1}
+
+
+/* Hotfix 13 — final interaction pass */
+/* Keep the playlist flyout on the outside-left of the track action menu. */
+.track-submenu{left:auto!important;right:calc(100% + 7px)!important;top:-7px!important}
+.track-submenu-wrap:after{left:auto!important;right:100%!important;width:12px}
+.track-submenu-wrap{padding-left:3px!important;padding-right:0!important}
+
+/* Let search use the available header width instead of an arbitrary cap. */
+.top-actions{max-width:none;min-width:0;margin-left:24px;flex:1 1 auto}
+.search-box{flex:1 1 420px;min-width:220px}
+.top-section-nav{flex:none}
+
+/* Queue is a first-class drop surface, including its empty state. */
+.queue-panel-list{min-height:0;position:relative}
+.queue-panel-list.queue-drop-active{background:color-mix(in srgb,var(--accent) 7%,transparent);outline:1px dashed var(--accent);outline-offset:-5px;border-radius:9px}
+.queue-panel-list .right-track{cursor:grab;touch-action:pan-y}
+.queue-panel-list .right-track:active{cursor:grabbing}
+.queue-panel-list .right-track.drop-indicator{position:relative;outline:0;background:color-mix(in srgb,var(--accent) 10%,transparent)}
+.queue-panel-list .right-track.drop-before:before,.queue-panel-list .right-track.drop-after:after{content:"";position:absolute;left:5px;right:5px;height:2px;background:var(--accent);border-radius:2px;pointer-events:none}
+.queue-panel-list .right-track.drop-before:before{top:-2px}
+.queue-panel-list .right-track.drop-after:after{bottom:-2px}
+
+/* Player controls grow continuously with the dragged player height. */
+.player-bar{--player-scale:1;flex:0 0 auto;position:relative;align-self:stretch;min-width:0;z-index:3}
+.player-bar .player-controls{gap:calc(12px * var(--player-scale));justify-content:center}
+.player-bar .player-controls .icon-button{width:calc(28px * var(--player-scale));height:calc(28px * var(--player-scale))}
+.player-bar .play-button{width:calc(34px * var(--player-scale));height:calc(34px * var(--player-scale))}
+.player-bar .player-art-button,.player-bar .player-art-button .cover-small{width:calc(44px * var(--player-scale));height:calc(44px * var(--player-scale));border-radius:calc(7px * var(--player-scale))}
+.player-bar .now-playing{gap:calc(10px * var(--player-scale));align-self:center}
+.player-bar .now-playing b{font-size:calc(11px * var(--player-scale))}
+.player-bar .now-playing span{font-size:calc(10px * var(--player-scale))}
+.player-bar .player-center{gap:calc(8px * var(--player-scale));align-self:center}
+.player-bar .player-extra{gap:calc(8px * var(--player-scale));align-self:center}
+.player-bar .player-extra svg{width:calc(17px * var(--player-scale));height:calc(17px * var(--player-scale))}
+.player-bar .player-extra input{width:calc(85px * var(--player-scale))}
+.player-bar .player-resize-handle{z-index:12}
+.player-bar .now-playing>div:nth-child(2){min-width:0}
+
+/* The editor uses the same in-app form language as playlist creation. */
+.edit-playlist-modal .create-playlist-body{display:grid;grid-template-columns:150px minmax(0,1fr);gap:20px;padding:22px 0}
+.edit-playlist-modal .playlist-cover-picker{width:150px;height:150px}
+.edit-playlist-modal .create-playlist-fields{display:flex;flex-direction:column;gap:14px;min-width:0}
+.edit-playlist-modal .create-playlist-fields label{display:flex;flex-direction:column;gap:7px;color:var(--subtle);font-size:11px;font-weight:600}
+.edit-playlist-modal .create-playlist-fields input,.edit-playlist-modal .create-playlist-fields textarea{width:100%;min-width:0;border:1px solid var(--line);border-radius:8px;background:var(--surface-2);color:var(--text);padding:11px 12px;outline:none;font:inherit;font-size:12px;resize:vertical}
+.edit-playlist-modal .create-playlist-fields textarea{min-height:92px;line-height:1.5}
+.edit-playlist-modal .create-playlist-fields input:focus,.edit-playlist-modal .create-playlist-fields textarea:focus{border-color:var(--subtle);box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 13%,transparent)}
+.edit-playlist-modal .create-playlist-fields label>span small{font-weight:400;color:var(--muted)}
+
+@media(max-width:760px){
+  .edit-playlist-modal .create-playlist-body{grid-template-columns:1fr}
+  .edit-playlist-modal .playlist-cover-picker{width:112px;height:112px}
+  .top-actions{gap:5px;margin-left:10px}
+  .search-box{min-width:150px}
+}
+
+.right-tabs button.queue-tab-drop-active{background:color-mix(in srgb,var(--accent) 16%,var(--surface-3));outline:1px dashed var(--accent);outline-offset:-2px;color:var(--text)}
+
+
+/* Hotfix 14 — theme-aware custom desktop titlebar and current-track shortcut */
+.topbar{position:relative;min-width:0}
+.topbar>.brand,.topbar>.top-actions,.topbar>.window-controls{position:relative;z-index:1}
+.window-controls{display:flex;align-items:center;gap:3px;flex:none;margin-left:10px;padding:0;border:0;border-radius:0;background:transparent}
+.window-controls button{width:34px;height:32px;display:grid;place-items:center;border:0;border-radius:7px;background:transparent;color:var(--muted);transition:background .16s ease,color .16s ease}
+.window-controls button:hover{background:var(--surface-3);color:var(--text)}
+.window-controls button.window-close:hover{background:var(--accent);color:var(--accent-text)}
+.player-track-link{display:flex;align-items:center;gap:10px;min-width:0;max-width:100%;padding:0;border:0;background:transparent;color:inherit;text-align:left;border-radius:8px;cursor:pointer}
+.player-track-link:hover .player-track-copy b{text-decoration:underline;text-decoration-color:var(--muted);text-underline-offset:3px}
+.player-track-link:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.player-track-copy{display:flex;flex-direction:column;gap:4px;min-width:0}
+.player-track-copy b,.player-track-copy>span{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.current-track-reveal{animation:current-track-pulse 1.35s ease-out}
+@keyframes current-track-pulse{0%,35%{background:color-mix(in srgb,var(--accent) 22%,var(--surface))}100%{background:transparent}}
+@media(max-width:1100px){.window-controls{gap:2px;margin-left:5px}.window-controls button{width:30px;height:30px}.top-actions{margin-left:12px}}
