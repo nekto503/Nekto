@@ -55,7 +55,7 @@
 | Файл | Для кого | Ссылка |
 |---|---|---|
 | `Nekto-1.0.0-Setup.exe` | Пользователям Windows | [Скачать установщик](https://github.com/nekto503/Nekto/releases/latest/download/Nekto-1.0.0-Setup.exe) |
-| `Nekto-1.0.0-hotfix-15.zip` | Разработчикам | [Скачать исходный проект](https://github.com/nekto503/Nekto/releases/latest/download/Nekto-1.0.0-hotfix-15.zip) |
+| `Nekto-1.0.0.zip` | Разработчикам | [Скачать исходный проект](https://github.com/nekto503/Nekto/releases/latest/download/Nekto-1.0.0-hotfix-15.zip) |
 
 ## Технологии
 
