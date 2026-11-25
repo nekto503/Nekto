@@ -4,8 +4,6 @@
 -->
 
 <div align="center">
-  <img src="screenshots/logo.png" alt="Nekto logo" width="88" />
-
   <h1>Nekto 1.1</h1>
   <p><strong>Твоя музыка. Твои правила.</strong></p>
   <p>Локальный музыкальный плеер для Windows — медиатека, плейлисты и управление воспроизведением в одном приложении.</p>
