@@ -52,7 +52,7 @@ body.lightbox-open{overflow:hidden}
 @media(max-width:640px){.topbar{margin-inline:10px;padding-inline:14px;border-radius:0 0 15px 15px}.nav{border-radius:16px}.download-section{margin-inline:10px;border-radius:20px}.lightbox-dialog{padding:7px;border-radius:15px}.lightbox-image{border-radius:9px}.lightbox-close{top:13px;right:13px;width:38px;height:38px}}
 @media(prefers-reduced-motion:reduce){.lightbox-overlay,.lightbox-dialog,.lightbox-close{transition:none}}
 
-/* Nekto 1.1 — equalizer feature visual */
+/* Nekto 1.1.0 — equalizer feature visual */
 .symbol-eq{display:flex;align-items:center;gap:8px;height:90px;width:150px;margin-top:48px}
 .symbol-eq i{display:block;width:9px;border:1px solid #ffffff88;border-radius:99px;background:linear-gradient(to top,#f2f2f2 0 42%,#ffffff18 42%);height:100%;position:relative}
 .symbol-eq i:nth-child(2){height:70%}.symbol-eq i:nth-child(3){height:88%}.symbol-eq i:nth-child(4){height:58%}.symbol-eq i:nth-child(5){height:78%}.symbol-eq i:nth-child(6){height:48%}.symbol-eq i:nth-child(7){height:66%}
