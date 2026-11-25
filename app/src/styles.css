@@ -87,7 +87,7 @@ html[data-reduce-motion="true"] *{scroll-behavior:auto!important;animation-durat
 .resize-handle{width:8px;min-width:8px;align-self:stretch;position:relative;cursor:col-resize;touch-action:none;border-radius:8px;z-index:2}
 .resize-handle:before{content:"";position:absolute;top:12px;bottom:12px;left:3px;width:2px;border-radius:3px;background:transparent;transition:background .15s ease}
 .resize-handle:hover:before,.resize-handle:active:before{background:var(--muted)}
-.brand-mark{overflow:hidden;padding:0;background:#000!important;color:#fff!important}
+.brand-mark{overflow:hidden;padding:0;background:#1E1E1E!important;color:#fff!important}
 .brand-mark img{display:block;width:100%;height:100%;object-fit:cover}
 .playlist-art img,.cover img{width:100%;height:100%;object-fit:cover;display:block}
 .lyrics-panel{flex:1;min-height:0;overflow:auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:20px;text-align:center;color:var(--muted);font-size:11px}
@@ -112,7 +112,7 @@ html[data-reduce-motion="true"] *{scroll-behavior:auto!important;animation-durat
 .right-tabs button[draggable="true"]:active{cursor:grabbing}
 
 /* Flat NEKTO brand mark: no shine, reflection, glow, or shadow. */
-.brand-mark{background:#000!important;box-shadow:none!important;filter:none!important;-webkit-box-reflect:none!important;transform:none!important}
+.brand-mark{background:#1E1E1E!important;box-shadow:none!important;filter:none!important;-webkit-box-reflect:none!important;transform:none!important}
 .brand-mark img{filter:none!important;box-shadow:none!important;mix-blend-mode:normal!important;opacity:1!important}
 
 
@@ -432,3 +432,316 @@ input[type="range"]{accent-color:var(--accent)}
 .current-track-reveal{animation:current-track-pulse 1.35s ease-out}
 @keyframes current-track-pulse{0%,35%{background:color-mix(in srgb,var(--accent) 22%,var(--surface))}100%{background:transparent}}
 @media(max-width:1100px){.window-controls{gap:2px;margin-left:5px}.window-controls button{width:30px;height:30px}.top-actions{margin-left:12px}}
+
+/* Nekto 1.1.0 — stable sidebar, settings tabs, switches and refined window controls */
+.workspace{min-width:0;grid-template-columns:minmax(180px,360px) 4px minmax(320px,1fr) 4px minmax(190px,420px)}
+.sidebar{min-width:180px;max-width:360px;overflow:hidden}
+.resize-handle{touch-action:none;cursor:col-resize}
+.track-context-menu{z-index:120;max-height:min(70vh,420px);overflow-y:auto;overscroll-behavior:contain}
+.track-context-menu .track-submenu{z-index:125}
+.settings-tabs{position:sticky;top:-22px;z-index:3;display:flex;gap:5px;padding:12px 0 13px;margin:0 0 3px;background:var(--surface);border-bottom:1px solid var(--line)}
+.settings-tabs button{flex:1;min-width:0;min-height:34px;padding:0 9px;border:1px solid transparent;border-radius:8px;background:transparent;color:var(--muted);font-family:inherit;font-size:11px;font-weight:600;line-height:1.2;cursor:pointer;white-space:nowrap}
+.settings-tabs button:hover{background:var(--hover);color:var(--text)}
+.settings-tabs button.active{background:var(--surface-3);border-color:var(--line);color:var(--text)}
+.toggle-row input[type="checkbox"]{appearance:none;-webkit-appearance:none;position:relative;flex:none;width:38px;height:22px;margin:0 1px 0 14px;padding:0;border:1px solid var(--line);border-radius:999px;background:var(--surface-3);cursor:pointer;transition:background .18s ease,border-color .18s ease}
+.toggle-row input[type="checkbox"]::before{content:"";position:absolute;left:2px;top:2px;width:16px;height:16px;border-radius:50%;background:var(--muted);box-shadow:0 1px 2px rgba(0,0,0,.2);transition:transform .18s ease,background .18s ease}
+.toggle-row input[type="checkbox"]:checked{background:var(--text);border-color:var(--text)}
+.toggle-row input[type="checkbox"]:checked::before{transform:translateX(16px);background:var(--surface)}
+.toggle-row input[type="checkbox"]:focus-visible{outline:2px solid var(--text);outline-offset:3px}
+.panels-no-outline .topbar,.panels-no-outline .sidebar,.panels-no-outline .main-panel,.panels-no-outline .right-panel,.panels-no-outline .player-bar{border-color:transparent!important}
+.restore-window-icon{transform:scaleX(-1)}
+@media(max-width:900px){.workspace{grid-template-columns:minmax(180px,220px) 4px minmax(280px,1fr)}.sidebar{min-width:180px}}
+
+/* Nekto 1.1.1 — navigation, panel sizing and secondary outline controls */
+.home-button{width:38px;height:38px;flex:none;display:grid;place-items:center;border:0;border-radius:50%;background:#202020;color:#f5f5f5;transition:background .16s ease,transform .16s ease}
+.home-button:hover{background:#303030;transform:scale(1.04)}
+.home-button.active{background:#f4f4f4;color:#111}
+.top-actions{max-width:900px;min-width:0;gap:10px}
+.top-section-nav{gap:6px;min-width:0}
+.top-section-nav button{height:38px;padding:0 16px;border:0;border-radius:999px;background:var(--surface-3);color:var(--muted);font-size:12px;font-weight:600}
+.top-section-nav button:hover{background:var(--hover);color:var(--text)}
+.top-section-nav button.active{background:var(--text);color:var(--bg)}
+.search-box{flex:0 1 340px;min-width:180px}
+.top-section-nav:empty + .search-box{flex:0 1 360px}
+.workspace{min-width:0;grid-template-columns:246px 8px minmax(0,1fr) 8px minmax(220px,270px)}
+.main-panel,.right-panel,.sidebar{min-width:0}
+.right-panel{grid-column:auto;justify-self:stretch;position:relative;left:auto;right:auto;transform:none;min-width:0;width:100%;max-width:100%}
+.resize-handle{min-width:8px;width:8px;flex:none}
+.track-context-menu{position:fixed;right:auto;top:0;left:0}
+.track-submenu{left:calc(100% + 7px);right:auto;top:-7px}
+.track-submenu-wrap:hover .track-submenu,.track-submenu-wrap:focus-within .track-submenu{display:flex;flex-direction:column;gap:2px}
+.page-heading{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap}
+.page-heading .eyebrow,.page-heading .page-title-line,.page-heading>p{flex-basis:100%}
+.page-heading .playlist-page-cover{flex:0 0 116px;margin:0 0 8px}
+.album-page-cover .cover{width:116px;height:116px}
+.album-page-cover .cover img{width:100%;height:100%;object-fit:cover}
+.secondary-no-outline .album-card,.secondary-no-outline .playlist-card,.secondary-no-outline .track-row,.secondary-no-outline .subtle-button,.secondary-no-outline .theme-option,.secondary-no-outline .toggle-row,.secondary-no-outline .settings-tabs button,.secondary-no-outline .top-section-nav button,.secondary-no-outline .search-box,.secondary-no-outline .right-tabs button,.secondary-no-outline .track-context-menu,.secondary-no-outline .track-submenu,.secondary-no-outline .mini-playlist,.secondary-no-outline .folder-nav-row,.secondary-no-outline .home-button{border-color:transparent!important;box-shadow:none!important}
+.eq-sliders{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;padding:18px 8px 12px}
+.eq-band{display:flex;flex-direction:column;align-items:center;gap:14px;min-width:0}
+.eq-band span{font-size:11px;color:var(--muted);font-weight:650}
+.eq-band input{width:100%;accent-color:var(--text)}
+.eq-band b{font-size:10px;font-variant-numeric:tabular-nums;color:var(--text)}
+@media(max-width:1100px){.top-section-nav button{padding:0 10px}.search-box{flex-basis:230px}.workspace{grid-template-columns:220px 8px minmax(0,1fr) 8px minmax(210px,240px)}}
+@media(max-width:900px){.workspace{grid-template-columns:minmax(180px,220px) 8px minmax(0,1fr)}.workspace .right-panel,.workspace .right-panel + *{display:none}.top-actions{margin-left:10px}.top-section-nav{overflow-x:auto}.search-box{flex:0 1 220px}}
+
+/* Nekto 1.1.0 final layout safeguards */
+.settings-content .settings-section{display:none}
+.settings-content[data-tab="appearance"] .settings-section[data-settings-group="appearance"],
+.settings-content[data-tab="navigation"] .settings-section[data-settings-group="navigation"],
+.settings-content[data-tab="layout"] .settings-section[data-settings-group="layout"],
+.settings-content[data-tab="behavior"] .settings-section[data-settings-group="behavior"],
+.settings-content[data-tab="equalizer"] .settings-section[data-settings-group="equalizer"]{display:block}
+.workspace{grid-template-columns:246px 8px minmax(0,1fr) 8px minmax(220px,270px)}
+@media(max-width:900px){
+  .workspace{grid-template-columns:minmax(180px,220px) 8px minmax(0,1fr)}
+  .workspace>.right-panel,.workspace>.resize-handle[aria-label="Изменить ширину правой панели"]{display:none}
+}
+
+/* Nekto 1.1.1 — requested UI polish and layout fixes */
+.collection-title-row{display:flex;align-items:center;gap:12px;margin:8px 0 6px}
+.collection-title-row h1{margin:0!important}
+.collection-add-button{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--surface-2);color:var(--subtle)}
+.collection-add-button:hover,.section-heading .tiny-icon:hover{background:#f2f2f2!important;color:#111!important;border-color:#f2f2f2!important}
+.section-heading .tiny-icon{width:30px;height:30px;border-radius:50%;transition:background .15s,color .15s,border-color .15s}
+.top-actions{max-width:none;gap:9px;flex:1 1 auto;min-width:0}
+.top-section-nav{flex:0 1 auto;min-width:0}
+.home-button{order:2;flex:0 0 38px}
+.search-box{order:3;flex:1 1 390px;min-width:270px;border-radius:999px;overflow:hidden}
+.top-actions>.icon-button{order:4;flex:0 0 36px;border-radius:50%;transition:background .15s,color .15s}
+.top-actions>.icon-button:hover{background:#f2f2f2;color:#111}
+.top-section-nav{order:1}
+.search-box input{min-width:0;white-space:nowrap;text-overflow:clip}
+.playlist-actions>.primary-button,.playlist-actions>.subtle-button,.playlist-actions>.tiny-icon{border-radius:11px}
+.create-playlist-modal .modal-foot button,.edit-playlist-modal .modal-foot button,.create-playlist-modal .icon-button{border-radius:11px}
+.track-context-menu{overflow:visible!important;isolation:isolate}
+.track-submenu-wrap{position:relative;z-index:130}
+.track-submenu{display:none;position:absolute;left:calc(100% + 3px)!important;right:auto!important;top:-6px!important;z-index:9999;min-width:190px;max-height:280px;overflow:auto;pointer-events:auto}
+.track-submenu-wrap:hover .track-submenu,.track-submenu-wrap:focus-within .track-submenu{display:flex!important;flex-direction:column;gap:2px}
+.track-submenu-wrap:after{content:"";position:absolute;left:100%;top:-6px;width:10px;height:calc(100% + 12px);background:transparent}
+.track-submenu button{width:100%;text-align:left;white-space:nowrap}
+/* Right panel stays in its own grid column; never position it over the main view. */
+.workspace{grid-template-columns:246px 8px minmax(0,1fr) 8px minmax(240px,270px);min-width:0;overflow:hidden}
+.workspace>.main-panel{min-width:0;width:100%}
+.workspace>.resize-handle[aria-label="Изменить ширину правой панели"]{position:relative;inset:auto;transform:none}
+.workspace>.right-panel{position:relative!important;inset:auto!important;transform:none!important;width:100%;min-width:0;max-width:100%;justify-self:stretch}
+/* Hide the right panel without leaving a phantom grid column. */
+.workspace:has(>.right-panel[hidden]){grid-template-columns:246px 8px minmax(0,1fr)}
+@media(max-width:1180px){.search-box{flex-basis:300px;min-width:235px}.top-section-nav button{padding-inline:11px}}
+@media(max-width:980px){.top-actions{gap:6px}.search-box{flex-basis:240px;min-width:205px}.top-section-nav{overflow-x:auto;scrollbar-width:none}.top-section-nav::-webkit-scrollbar{display:none}}
+@media(max-width:900px){.search-box{min-width:180px;flex-basis:200px}.workspace{grid-template-columns:minmax(180px,220px) 8px minmax(0,1fr)!important}.workspace>.right-panel,.workspace>.resize-handle[aria-label="Изменить ширину правой панели"]{display:none!important}}
+
+
+/* Nekto 1.1.2 — final navigation, audio controls and interaction polish */
+.top-actions{margin-left:clamp(72px,9vw,150px);max-width:none;min-width:0;gap:9px;flex:1 1 auto}
+.top-section-nav{flex:0 0 auto;min-width:0;gap:6px}
+.top-section-nav button{flex:0 0 auto}
+.search-box{flex:1 1 420px;min-width:360px;border-radius:999px;overflow:hidden}
+.search-box input{min-width:0;white-space:nowrap;text-overflow:clip}
+.home-button{background:var(--surface-2)!important;color:var(--muted);border:1px solid transparent;border-radius:50%;transition:background .18s ease,color .18s ease,transform .18s ease}
+.home-button:hover{background:var(--hover)!important;color:var(--text);transform:translateY(-1px)}
+.home-button.active{background:var(--surface-2)!important;color:var(--text)}
+.home-button.active svg{fill:currentColor}
+/* Keep the right panel mounted and resizable; dragging never toggles it closed. */
+.workspace{grid-template-columns:246px 8px minmax(0,1fr) 8px minmax(240px,270px);min-width:0;overflow:hidden}
+.workspace>.main-panel{grid-column:auto;grid-row:auto;min-width:0;width:100%}
+.workspace>.resize-handle[aria-label="Изменить ширину правой панели"]{grid-column:auto;grid-row:auto;position:relative;inset:auto;transform:none;touch-action:none}
+.workspace>.right-panel{grid-column:auto;grid-row:auto;position:relative!important;inset:auto!important;transform:none!important;width:100%;min-width:0;max-width:100%;justify-self:stretch}
+.workspace:has(>.right-panel[hidden]){grid-template-columns:246px 8px minmax(0,1fr)}
+.workspace:has(>.main-panel:first-child){grid-template-columns:minmax(0,1fr) 8px minmax(240px,270px)}
+.workspace:has(>.main-panel:first-child)>.main-panel{grid-column:1}
+.workspace:has(>.main-panel:first-child)>.resize-handle[aria-label="Изменить ширину правой панели"]{grid-column:2}
+.workspace:has(>.main-panel:first-child)>.right-panel{grid-column:3}
+button{border-radius:9px;transition:background-color .18s ease,color .18s ease,border-color .18s ease,box-shadow .18s ease,transform .18s ease}
+button:active{transform:scale(.975)}
+.icon-button,.tiny-icon{border-radius:9px}
+.top-section-nav button,.home-button{border-radius:999px}
+.home-track-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px}
+.home-track-card{display:flex;align-items:center;gap:11px;min-width:0;padding:10px 12px;border:1px solid var(--line);border-radius:11px;background:var(--surface-2);text-align:left;color:var(--text)}
+.home-track-card:hover{background:var(--hover);border-color:var(--muted);transform:translateY(-2px)}
+.home-track-card>span{display:flex;flex:1;min-width:0;flex-direction:column;gap:4px}
+.home-track-card b,.home-track-card small{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.home-track-card b{font-size:12px;font-weight:650}
+.home-track-card small{font-size:10px;color:var(--muted)}
+.home-track-card>svg{flex:none;color:var(--muted)}
+.home-empty-hint{padding:14px 16px;border:1px solid var(--line);border-radius:11px;color:var(--muted);font-size:12px;background:var(--surface-2)}
+.settings-content .settings-section{padding:16px;margin:0 0 12px;border:1px solid var(--line);border-radius:12px;gap:14px}
+.settings-content .settings-option-list{gap:10px}
+.settings-content .toggle-row{padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface-2)}
+.panels-no-outline.secondary-no-outline .settings-content .settings-section,
+.panels-no-outline.secondary-no-outline .settings-content .toggle-row{border-color:transparent!important;box-shadow:none!important}
+.track-context-menu .track-submenu{left:auto!important;right:calc(100% + 7px)!important;top:-7px!important}
+.track-submenu-wrap:after{left:auto!important;right:100%!important;width:12px}
+.track-submenu-wrap{padding-left:3px!important;padding-right:0!important}
+.album-card,.playlist-card,.track-row,.right-track,.section-heading .tiny-icon,.icon-button,.subtle-button,.primary-button,.text-button,.window-controls button{transition:background-color .18s ease,color .18s ease,border-color .18s ease,transform .18s ease,box-shadow .18s ease}
+.album-card:hover,.playlist-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.16)}
+.track-row:hover{background:var(--hover)}
+.section-heading .tiny-icon:hover,.icon-button:hover{background:var(--text);color:var(--bg);box-shadow:0 0 0 2px color-mix(in srgb,var(--text) 12%,transparent)}
+@keyframes nekto-fade-up{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+.main-panel{animation:nekto-fade-up .24s ease-out both}
+.content-section{animation:nekto-fade-up .28s ease-out both}
+.content-section:nth-of-type(2){animation-delay:.025s}
+.content-section:nth-of-type(3){animation-delay:.05s}
+@media(max-width:1450px){.top-actions{margin-left:clamp(34px,6vw,100px)}.search-box{min-width:320px;flex-basis:340px}}
+@media(max-width:1180px){.top-actions{margin-left:24px;gap:6px}.search-box{min-width:260px;flex-basis:280px}.top-section-nav button{padding-inline:10px}}
+@media(max-width:980px){.top-actions{margin-left:12px}.search-box{min-width:180px;flex-basis:200px}.top-section-nav{overflow-x:auto;scrollbar-width:none}.top-section-nav::-webkit-scrollbar{display:none}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+[data-reduce-motion="true"] *,[data-reduce-motion="true"] *::before,[data-reduce-motion="true"] *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+
+/* Theme-aware hover circles: white in dark themes, black in light themes. */
+.section-heading .tiny-icon:hover,.collection-add-button:hover,.top-actions>.icon-button:hover{background:var(--text)!important;color:var(--bg)!important;border-color:var(--text)!important}
+
+
+/* Nekto 1.1.3 — cursor-anchored menus, compact navigation and refined controls */
+/* Track context menus are portalled to document.body; these coordinates are viewport-relative. */
+.track-context-menu{position:fixed!important;z-index:99999!important;max-width:min(240px,calc(100vw - 16px));max-height:min(70vh,420px);overflow:visible;animation:nekto-menu-in .13s ease-out both;transform-origin:top left}
+@keyframes nekto-menu-in{from{opacity:0;transform:translateY(4px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+/* The submenu opens left so it stays inside the window. */
+.track-context-menu .track-submenu{left:auto!important;right:calc(100% + 7px)!important;top:-7px!important}
+.track-submenu-wrap:after{left:auto!important;right:100%!important;width:12px}
+/* Settings cards and their individual controls have consistent breathing room. */
+.settings-content .settings-section{display:flex;flex-direction:column;gap:14px}
+.settings-content .settings-section[data-settings-group="behavior"]>.toggle-row{margin:0 0 4px}
+.settings-content .settings-section[data-settings-group="behavior"]>.toggle-row:last-of-type{margin-bottom:0}
+.settings-content .settings-section .settings-option-list{display:flex;flex-direction:column;gap:10px}
+/* Queue / history / track tabs match the pill navigation at the top. */
+.right-tabs{gap:7px;padding:0 14px 12px}
+.right-tabs button{height:32px;padding:0 13px;border-radius:999px;background:var(--surface-2);border:1px solid transparent;font-size:11px;transition:background .18s,color .18s,transform .18s,border-color .18s}
+.right-tabs button:hover{background:var(--hover);color:var(--text);transform:translateY(-1px)}
+.right-tabs button.selected{background:var(--text);color:var(--bg);border-color:var(--text)}
+/* Header: push navigation right and cap the search width instead of stretching it across the bar. */
+.top-actions{margin-left:clamp(70px,8vw,132px)!important;max-width:none!important;min-width:0;gap:9px;flex:1 1 auto;justify-content:flex-start}
+.top-section-nav{flex:0 0 auto;min-width:0;gap:6px}
+.top-section-nav button{padding-inline:13px}
+.home-button{flex:0 0 38px;background:var(--surface-2)!important;color:var(--muted);border:1px solid transparent}
+.home-button:hover{background:var(--hover)!important;color:var(--text)}
+.home-button.active{background:var(--surface-2)!important;color:var(--text)}
+.search-box{flex:0 1 420px!important;width:420px;min-width:300px;max-width:34vw;height:38px;border-radius:999px!important;background:var(--surface-2);overflow:hidden}
+.search-box input{min-width:0;font-size:11px;white-space:nowrap;text-overflow:ellipsis}
+.search-box input::placeholder{opacity:.9}
+/* Gear microinteraction. */
+.top-actions>.icon-button:hover svg{animation:nekto-gear-spin .55s cubic-bezier(.2,.75,.25,1)}
+@keyframes nekto-gear-spin{from{transform:rotate(0)}to{transform:rotate(90deg)}}
+/* Sort selector as a compact floating control. */
+.sort-select-wrap{position:relative;display:inline-flex;align-items:center;min-width:132px}
+.sort-select-wrap select{appearance:none;-webkit-appearance:none;width:100%;height:30px;padding:0 30px 0 11px;border:1px solid var(--line);border-radius:9px;background:var(--surface-2);color:var(--text);font-size:10px;font-weight:550;cursor:pointer;transition:border-color .18s,background .18s,box-shadow .18s}
+.sort-select-wrap select:hover,.sort-select-wrap select:focus-visible{background:var(--surface-3);border-color:var(--muted);box-shadow:0 0 0 3px color-mix(in srgb,var(--text) 8%,transparent);outline:none}
+.sort-select-wrap>svg{position:absolute;right:10px;pointer-events:none;color:var(--muted)}
+.sort-select-wrap option{background:var(--surface);color:var(--text)}
+/* Apple-Music-inspired monochrome icon tile: two white notes on black. */
+.brand-mark{width:32px;height:32px;border-radius:11px!important;background:#1E1E1E!important;overflow:hidden;box-shadow:none!important}
+.brand-mark img{width:100%;height:100%;object-fit:cover}
+/* Small, consistent radius on all interactive surfaces. */
+button,.sort-select-wrap select{border-radius:10px}
+.top-section-nav button,.right-tabs button,.home-button{border-radius:999px}
+@media(max-width:1450px){.top-actions{margin-left:clamp(32px,5vw,78px)!important}.search-box{flex-basis:360px!important;min-width:270px;max-width:32vw}}
+@media(max-width:1180px){.top-actions{margin-left:18px!important;gap:6px}.search-box{flex-basis:300px!important;min-width:220px;max-width:30vw}.top-section-nav button{padding-inline:9px}}
+@media(max-width:980px){.top-actions{margin-left:10px!important}.search-box{flex-basis:230px!important;min-width:170px;max-width:28vw}.top-section-nav{overflow-x:auto;scrollbar-width:none}}
+
+
+/* Nekto 1.1.4 — settings layout repair, high-contrast portals and final polish */
+.settings-content{width:100%;min-width:0;align-items:stretch;gap:18px}
+.settings-content .settings-section,
+.settings-content[data-tab="appearance"] .settings-section[data-settings-group="appearance"],
+.settings-content[data-tab="navigation"] .settings-section[data-settings-group="navigation"],
+.settings-content[data-tab="layout"] .settings-section[data-settings-group="layout"],
+.settings-content[data-tab="behavior"] .settings-section[data-settings-group="behavior"],
+.settings-content[data-tab="equalizer"] .settings-section[data-settings-group="equalizer"]{
+  display:flex!important;flex-direction:column;align-items:stretch;width:100%;min-width:0;gap:14px;
+}
+.settings-content .settings-section-title{width:100%;min-width:0;margin:0 0 2px}
+.settings-content .settings-option-list{width:100%;display:flex;flex-direction:column;gap:12px}
+.settings-content .toggle-row{width:100%;min-width:0;display:flex;align-items:center;gap:20px;padding:16px 18px;margin:0;border-radius:13px}
+.settings-content .toggle-row>span{flex:1 1 auto;min-width:0;max-width:none;display:flex;flex-direction:column;gap:6px}
+.settings-content .toggle-row b{font-size:13px;line-height:1.35;white-space:normal;overflow-wrap:anywhere}
+.settings-content .toggle-row small{font-size:11px;line-height:1.45;white-space:normal;overflow-wrap:anywhere}
+.settings-content .toggle-row input[type="checkbox"]{flex:0 0 42px;width:42px;height:24px;margin:0 2px 0 10px}
+.settings-content .toggle-row input[type="checkbox"]::before{width:18px;height:18px}
+.settings-content .toggle-row input[type="checkbox"]:checked::before{transform:translateX(18px)}
+.settings-modal{width:min(900px,94vw);max-width:900px;min-width:0}
+.settings-modal .settings-content{max-height:calc(90vh - 160px);overflow:auto;padding:18px 2px}
+.settings-modal .settings-tabs{position:sticky;top:0;z-index:5;padding-top:8px;background:var(--surface)}
+.settings-content .settings-section[data-settings-group="behavior"]>.toggle-row{margin:0}
+.settings-content .settings-section[data-settings-group="behavior"] .settings-subsection,
+.settings-content .settings-section[data-settings-group="behavior"] .shortcut-list{width:100%;min-width:0;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--surface-2)}
+.settings-content .eq-sliders{width:100%;gap:18px}
+.settings-content .density-choice{display:flex;flex-wrap:wrap;gap:10px}
+.settings-content .density-choice button{min-height:38px;padding:8px 14px;border-radius:11px}
+
+/* The context menu is rendered in document.body; give it its own theme tokens. */
+.track-context-menu[data-theme="graphite"],.track-context-menu[data-theme="mono"],.track-context-menu[data-theme="slate"],.track-context-menu[data-theme="studio"]{--surface:#171717;--surface-2:#202020;--surface-3:#292929;--line:#383838;--text:#f4f4f4;--muted:#a3a3a3;--hover:#303030;color:var(--text);background:var(--surface);border:1px solid var(--line);box-shadow:0 18px 54px rgba(0,0,0,.72)}
+.track-context-menu[data-theme="paper"],.track-context-menu[data-theme="pearl"],.track-context-menu[data-theme="chalk"]{--surface:#f5f5f2;--surface-2:#ebebe7;--surface-3:#deded9;--line:#c9c9c3;--text:#171717;--muted:#666660;--hover:#deded9;color:var(--text);background:var(--surface);border:1px solid var(--line);box-shadow:0 18px 54px rgba(0,0,0,.24)}
+.track-context-menu[data-theme="warm"]{--surface:#241d19;--surface-2:#302620;--surface-3:#3a3029;--line:#514238;--text:#f4ece5;--muted:#b6a99f;--hover:#3a3029;color:var(--text);background:var(--surface);border:1px solid var(--line);box-shadow:0 18px 54px rgba(0,0,0,.55)}
+.track-context-menu[data-theme="ash"]{--surface:#202529;--surface-2:#2a3035;--surface-3:#353d43;--line:#465057;--text:#f0f3f5;--muted:#aab3b9;--hover:#353d43;color:var(--text);background:var(--surface);border:1px solid var(--line);box-shadow:0 18px 54px rgba(0,0,0,.6)}
+.track-context-menu[data-theme="glass"]{--surface:#20262beF;--surface-2:#2a3238;--surface-3:#374149;--line:#53616b;--text:#f2f5f7;--muted:#b0bac1;--hover:#374149;color:var(--text);background:var(--surface);border:1px solid var(--line);box-shadow:0 18px 54px rgba(0,0,0,.62);backdrop-filter:blur(18px)}
+.track-context-menu button,.track-submenu button{color:var(--text)!important;background:transparent!important;border-radius:9px!important;min-height:36px;padding:8px 11px;font-size:12px;white-space:nowrap}
+.track-context-menu button:hover,.track-submenu button:hover{background:var(--hover)!important;color:var(--text)!important}
+.track-context-menu .track-submenu{background:var(--surface)!important;border:1px solid var(--line);border-radius:12px;box-shadow:0 18px 54px rgba(0,0,0,.65);min-width:190px;padding:8px;z-index:100000}
+.track-submenu-wrap:after{right:100%!important;left:auto!important;width:14px!important}
+.track-submenu-wrap:hover .track-submenu,.track-submenu-wrap:focus-within .track-submenu{display:flex!important;flex-direction:column;gap:3px}
+
+/* Search and Home use the exact same neutral surface as the navigation pills. */
+.search-box,.home-button{background:var(--surface-3)!important;border-color:transparent!important}
+.search-box:focus-within{background:var(--surface-3)!important}
+.home-button{color:var(--muted)!important}
+.home-button:hover,.home-button.active{background:var(--surface-3)!important;color:var(--text)!important}
+.top-actions{margin-left:clamp(105px,11vw,175px)!important}
+.settings-gear.gear-ready svg{animation:nekto-gear-freeze 1.15s linear infinite;animation-play-state:paused;transform-origin:50% 50%}
+.settings-gear.gear-ready:hover svg{animation-play-state:running}
+@keyframes nekto-gear-freeze{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.main-panel{animation:nekto-section-enter .25s cubic-bezier(.2,.7,.2,1) both}
+@keyframes nekto-section-enter{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+.track-context-menu{animation:nekto-menu-enter .16s ease-out both}
+@keyframes nekto-menu-enter{from{opacity:0;transform:translateY(5px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:1250px){.top-actions{margin-left:clamp(30px,5vw,75px)!important}}
+@media(max-width:980px){.top-actions{margin-left:12px!important}.settings-modal{width:94vw}.settings-modal .settings-content{max-height:calc(90vh - 145px)}}
+
+/* Nekto 1.1 — navigation spacing, independent settings pages and 10-band EQ */
+.top-actions{margin-left:clamp(135px,12.5vw,215px)!important;gap:10px!important;max-width:none!important}
+.top-section-nav{gap:10px!important}
+.top-section-nav button{margin:0!important}
+.home-button,.search-box,.top-actions>.settings-gear{margin:0!important}
+.search-box{flex:0 1 410px!important;width:410px;min-width:280px;max-width:32vw}
+.settings-tabs{gap:8px!important}
+.settings-tabs button{min-height:40px;border-radius:999px!important;background:var(--surface-2);border:1px solid transparent;transition:background .18s ease,color .18s ease,transform .18s ease,border-color .18s ease}
+.settings-tabs button:hover{transform:translateY(-1px)}
+.settings-tabs button.active{background:var(--text);color:var(--bg);border-color:var(--text)}
+.settings-tab-intro{padding:2px 2px 8px}
+.settings-tab-intro h3{font-size:18px;margin:0 0 4px;letter-spacing:-.025em}
+.settings-tab-intro p{font-size:11px;color:var(--muted);margin:0}
+.settings-content .settings-section{display:flex!important;flex-direction:column;align-items:stretch;gap:16px;padding:18px;margin:0;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+.settings-content .settings-section-title{margin:0 0 2px}
+.settings-content .settings-option-list{display:flex;flex-direction:column;gap:10px}
+.settings-content .toggle-row{margin:0;padding:14px 16px;border-radius:12px;background:var(--surface-2);border:1px solid var(--line)}
+.settings-content .density-choice{display:flex;flex-wrap:wrap;gap:10px}
+.settings-content .density-choice button{min-height:40px;padding:8px 15px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line);color:var(--subtle)}
+.settings-content .density-choice button.choice-active{background:var(--text);color:var(--bg);border-color:var(--text)}
+.settings-content .shortcut-list{width:100%;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--surface-2)}
+.settings-content .shortcut-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--line)}
+.settings-content .shortcut-row:last-of-type{border-bottom:0}
+.eq-toolbar{display:grid;grid-template-columns:minmax(0,1fr) minmax(180px,230px);gap:12px;align-items:stretch}
+.eq-toolbar>.toggle-row{margin:0}
+.eq-preset{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 13px;border:1px solid var(--line);border-radius:12px;background:var(--surface-2);font-size:11px;color:var(--muted)}
+.eq-preset select{min-width:0;max-width:140px;height:34px;padding:0 28px 0 10px;border:1px solid var(--line);border-radius:9px;background:var(--surface-3);color:var(--text);font:inherit;outline:none}
+.eq-panel{display:grid;grid-template-columns:repeat(11,minmax(0,1fr));gap:clamp(5px,1.1vw,14px);padding:18px 14px 14px;border:1px solid var(--line);border-radius:14px;background:var(--surface-2);min-width:0}
+.eq-scale{grid-column:1/-1;display:flex;justify-content:space-between;padding:0 2px 2px;color:var(--muted);font-size:10px}
+.eq-band{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:10px;min-width:0;min-height:250px}
+.eq-band input[type="range"]{appearance:slider-vertical;-webkit-appearance:slider-vertical;writing-mode:vertical-lr;direction:rtl;width:24px;height:180px;margin:0;accent-color:var(--text);cursor:pointer;touch-action:pan-x}
+.eq-band input[type="range"]:disabled{opacity:.35;cursor:not-allowed}
+.eq-band>span{font-size:11px;color:var(--text);font-weight:650;white-space:nowrap}
+.eq-band>span small{font-size:9px;color:var(--muted)}
+.eq-band>b{font-size:10px;font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}
+.eq-preamp{border-right:1px solid var(--line);padding-right:6px}
+.eq-preamp>span{font-size:10px}
+.eq-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;color:var(--muted);font-size:10px}
+.startup-loader{position:fixed;inset:0;z-index:100000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:var(--bg,#090909);pointer-events:none;animation:nekto-loader-in .18s ease-out both}
+.startup-loader-mark{width:44px;height:44px;display:grid;place-items:center;border-radius:14px;background:#050505;color:#fff;opacity:.84}
+.startup-loader-track{width:92px;height:2px;border-radius:2px;overflow:hidden;background:var(--line,#282828);opacity:.75}
+.startup-loader-track span{display:block;width:38%;height:100%;border-radius:2px;background:var(--muted,#929292);animation:nekto-loader-progress .95s ease-in-out infinite alternate}
+@keyframes nekto-loader-in{from{opacity:0}to{opacity:1}}
+@keyframes nekto-loader-progress{from{transform:translateX(-10%)}to{transform:translateX(175%)}}
+.settings-gear svg{transform:rotate(0deg);transform-origin:50% 50%;transition:transform .72s cubic-bezier(.2,.8,.2,1)}
+.settings-gear:hover svg{transform:rotate(180deg)}
+.settings-gear:not(:hover) svg{transform:rotate(0deg)}
+@media(max-width:1250px){.top-actions{margin-left:clamp(42px,6vw,90px)!important;gap:8px!important}.top-section-nav{gap:8px!important}.search-box{flex-basis:300px!important;min-width:230px;max-width:29vw}}
+@media(max-width:980px){.top-actions{margin-left:16px!important;gap:6px!important}.top-section-nav{gap:6px!important}.search-box{flex-basis:210px!important;min-width:160px;max-width:25vw}.eq-panel{gap:4px;padding:12px 8px}.eq-band input[type="range"]{height:150px}.eq-band{min-height:220px}.eq-band>span{font-size:9px}}
+.settings-gear svg{animation:none!important}
